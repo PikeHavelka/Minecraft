@@ -1,0 +1,9 @@
+@import "../partials/variables";
+
+footer {
+  background-color: $general-bg;
+  grid-area: d;
+
+  text-align: center;
+  line-height: 3rem;
+}

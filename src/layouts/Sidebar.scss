@@ -1,0 +1,37 @@
+@import "../partials/variables";
+
+aside {
+  background-color: $general-bg;
+  grid-area: b;
+
+  padding: .5rem;
+
+  h2 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
+  }
+
+  .side-data-row {
+    text-align: center;
+    margin-top: 1rem;
+    box-shadow: 1px 1px 5px black;
+
+    .server-info {
+      font-weight: 600;
+    }
+
+    .status-green {
+      color: green;
+    }
+  
+    .status-red {
+      color: red;
+    }
+  }
+
+  .refresh-info {
+    text-align: center;
+    margin-top: .5rem;
+  }
+}

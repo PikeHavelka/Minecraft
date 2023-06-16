@@ -1,0 +1,35 @@
+@import "../partials/variables";
+
+main {
+  background-color: $general-bg;
+  grid-area: c;
+  
+  overflow: auto;
+  padding: .5rem;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
+  }
+
+  .mods {
+    display: flex;
+    justify-content: space-evenly;
+    
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    .mod-versions {
+      text-align: center;
+    }
+  }
+}
+

@@ -1,0 +1,19 @@
+@import "../partials/variables";
+
+header {
+  background-color: $general-bg;
+  grid-area: a;
+  
+  .title {
+    text-align: center;
+    
+    h1 {
+      font-size: 7rem;
+    }
+    
+    h3 {
+      margin-top: -2rem;
+      font-size: 2rem;
+    }
+  }
+}

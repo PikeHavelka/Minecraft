@@ -1,0 +1,42 @@
+@import "partials/variables";
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: url("./assets/images/mc-bg.jpg") center/cover no-repeat;
+  color: $general-font;
+  font-family: 'Cinzel', serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid-container {
+  max-width: calc((1100 / 16) * 1rem);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-rows: 10rem 1fr 3rem;
+  grid-template-columns: 25% 1fr;
+  grid-template-areas:
+    "a a"
+    "b c"
+    "d d";
+  
+  gap: .5rem;
+  height: 100vh;
+}
+
+.grid-container > * {
+  box-shadow: 5px 5px 5px black;
+}
+
+.blur-effect {
+  backdrop-filter: blur(3px);
+}
