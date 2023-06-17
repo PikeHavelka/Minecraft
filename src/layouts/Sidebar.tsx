@@ -31,7 +31,7 @@ function Sidebar({ serverDataSideBar, playersData }: { serverDataSideBar: sideDa
 
       <div className="side-data-row">
         <h3>Players</h3>
-        <p className="server-info">{playersData} / {serverDataSideBar.serverPlayersMax}</p>
+        <p className="server-info">{serverDataSideBar.serverPlayersOnline || playersData} / {serverDataSideBar.serverPlayersMax}</p>
       </div>
     </div>
 

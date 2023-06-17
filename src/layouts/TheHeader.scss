@@ -1,19 +1,39 @@
 @import "../partials/variables";
+@import "../partials/mixins";
 
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   background-color: $general-bg;
   grid-area: a;
   
   .title {
     text-align: center;
-    
+
     h1 {
       font-size: 7rem;
+      line-height: 6rem;
     }
     
     h3 {
-      margin-top: -2rem;
       font-size: 2rem;
+    }
+  }
+}
+
+// Other devices
+@media (max-width: ((900px / 16px) * 1rem)) {
+  header {
+    .title {
+      h1 {
+        @include clamp-font-size(1.5rem, 15vw, 7rem);
+      }
+
+      h3 {
+        @include clamp-font-size(1rem, 5vw, 2rem);
+      }
     }
   }
 }

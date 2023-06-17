@@ -15,7 +15,7 @@ function TheMain({ serverDataMain }: { serverDataMain: mainData }) {
 
   return <main>
     <div className="title">
-      <img src={serverDataMain.serverFavicon} alt="The Mod Pack Name" />
+      <img src={serverDataMain.serverFavicon} alt="Mod Pack Name" />
       <h1>Mod List</h1>
     </div>
 

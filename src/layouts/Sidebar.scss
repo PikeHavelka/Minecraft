@@ -1,4 +1,5 @@
 @import "../partials/variables";
+@import "../partials/mixins";
 
 aside {
   background-color: $general-bg;
@@ -10,13 +11,22 @@ aside {
     text-align: center;
     border-bottom: 1px solid black;
     margin-bottom: 1rem;
+
+    @include clamp-font-size(.5rem, 3vw, 2rem);
   }
 
   .side-data-row {
     text-align: center;
     margin-top: 1rem;
     box-shadow: 1px 1px 5px black;
+    
+    h3 {
+      @include clamp-font-size(.9rem, 3vw, 1.5rem);
+    }
 
+    p {
+      @include clamp-font-size(.7rem, 3vw, 1rem);
+    }
     .server-info {
       font-weight: 600;
     }
@@ -33,5 +43,7 @@ aside {
   .refresh-info {
     text-align: center;
     margin-top: .5rem;
+
+    @include clamp-font-size(.5rem, 3vw, 1rem);
   }
 }
