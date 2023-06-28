@@ -40,3 +40,9 @@ img {
 .blur-effect {
   backdrop-filter: blur(3px);
 }
+
+@media (orientation: landscape) {
+  html {
+    background: url("./assets/images/mc-bg.jpg") center no-repeat;
+  }
+}
