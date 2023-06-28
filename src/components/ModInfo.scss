@@ -1,0 +1,21 @@
+.one-mode {
+  display: flex;
+  justify-content: space-between;
+
+  white-space: nowrap;
+}
+
+// Other Devices
+@media (max-width: ((855px / 16px) * 1rem)) {
+  .one-mode {
+    display: block;
+
+    h3 {
+      text-align: center;
+    }
+
+    h3:last-child {
+      margin-bottom: .5rem;
+    }
+  }
+}

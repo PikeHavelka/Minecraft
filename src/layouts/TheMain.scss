@@ -21,42 +21,9 @@ main {
       font-size: 3rem;
     }
   }
-
-  .mods {
-    display: flex;
-    padding: 0 .5rem;
-
-    white-space: nowrap;
-    
-    h3 {
-      font-size: 1.3rem;
-    }
-
-    .mod-versions {
-      text-align: center;
-    }
-  }
 }
 
 // Other Devices
-@media (max-width: ((1100px / 16px) * 1rem)) {
-  main {
-    .mods {
-      text-align-last: left;
-
-      h3 {
-        font-size: 1rem;
-      }
-    }
-  }
-}
-
-@media (max-width: ((050px / 16px) * 1rem)) {
-  main {
-    overflow: scroll;
-  }
-}
-
 @media (max-width: ((550px / 16px) * 1rem)) {
   main {
     .title {

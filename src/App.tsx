@@ -4,12 +4,12 @@ import TheFooter from "./layouts/TheFooter"
 import TheHeader from "./layouts/TheHeader"
 import TheMain from "./layouts/TheMain"
 import { useState, useEffect } from "react"
-import { webSocketData } from "./types/typesData"
+import { MainData, WebSocketData } from "./types/typesData"
 
 function App() {
   const [sideData, setSideData] = useState({ serverOnline: false, serverDescription: "??", serverPlayersMax: 20, serverVersion: "??", serverPlayersOnline: 0 })
   const [currentPlayers, setCurrentPlayers] = useState(0)
-  const [mainData, setMainData] = useState({ serverFavicon: "#", serverMods: {} })
+  const [mainData, setMainData] = useState<MainData>({ serverFavicon: "", serverMods: {} })
 
   useEffect(() => {
     const webSocket = new WebSocket("wss://dev-null.xyz/api/ws")
@@ -19,7 +19,7 @@ function App() {
     }
 
     webSocket.onmessage = (e) => {
-      const data = JSON.parse(e.data) as webSocketData
+      const data = JSON.parse(e.data) as WebSocketData
       
       if (data.message.type === "initial") {
         const serverOnline = data.message.online

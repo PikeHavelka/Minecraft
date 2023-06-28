@@ -1,17 +1,15 @@
 import "./TheMain.scss"
-import { mainData } from "../types/typesData"
-import { useState, useEffect } from "react"
+import { MainData } from "../types/typesData"
+import ModInfo from "../components/ModInfo"
 
-function TheMain({ serverDataMain }: { serverDataMain: mainData }) {
-  const [modN, setModN] = useState([])
-  const [modV, setModV] = useState([])
+function TheMain({ serverDataMain } : { serverDataMain: MainData }) {
 
-  useEffect(() => {
-    const modName = Object.keys(serverDataMain.serverMods) as []
-    setModN(modName)
-
-    setModV(Object.values(serverDataMain.serverMods))
-  }, [serverDataMain.serverMods])
+  const modsData = Object.keys(serverDataMain.serverMods).map( (modName) => {
+    return {
+      modName: modName,
+      modVersion: serverDataMain.serverMods[modName]
+    }
+  })
 
   return <main>
     <div className="title">
@@ -20,17 +18,9 @@ function TheMain({ serverDataMain }: { serverDataMain: mainData }) {
     </div>
 
     <div className="mods">
-      <div className="mod-names">
-        {modN.map((oneMod: string, index: number) => {
-          return <h3 key={index}>{index + 1}. {oneMod}</h3>
-        })}
-      </div>
-
-      <div className="mod-versions">
-        {modV.map((keys: string, index: number) => {
-          return <h3 key={index}>{keys}</h3>
-        })}
-      </div>
+      {modsData.map( (oneModeInfo, index) => {
+        return <ModInfo key={index} name={oneModeInfo.modName} version={oneModeInfo.modVersion} i={index} /> 
+      })}
     </div>
   </main>
 }

@@ -20,17 +20,16 @@ img {
 .grid-container {
   max-width: calc((1100 / 16) * 1rem);
   margin: 0 auto;
-
+  
   display: grid;
-  grid-template-rows: 10rem 1fr 3rem;
+  grid-template-rows: 10rem 1fr 5rem;
   grid-template-columns: 25% 1fr;
   grid-template-areas:
-    "a a"
-    "b c"
-    "d d";
-  
+                      "a a"
+                      "b c"
+                      "d d";
+                        
   gap: .5rem;
-  height: 100vh;
 }
 
 .grid-container > * {
@@ -39,4 +38,10 @@ img {
 
 .blur-effect {
   backdrop-filter: blur(3px);
+}
+
+@media screen and (orientation: landscape) {
+   .grid-container {
+     height: 100vh;
+   }
 }

@@ -1,7 +1,7 @@
 import "./Sidebar.scss"
-import { sideData } from "../types/typesData"
+import { SideData } from "../types/typesData"
 
-function Sidebar({ serverDataSideBar, playersData }: { serverDataSideBar: sideData, playersData: number }) {
+function Sidebar({ serverDataSideBar, playersData }: { serverDataSideBar: SideData, playersData: number }) {
   let serverStatus = "??"
 
   if (serverDataSideBar.serverOnline === true) {

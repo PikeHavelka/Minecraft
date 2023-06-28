@@ -2,7 +2,7 @@ import "./TheFooter.scss"
 
 function TheFooter() {
   return <footer>
-    <p>All right reserved &copy;</p>
+    <p>All rights reserved &copy;</p>
   </footer>
 }
 
