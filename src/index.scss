@@ -40,3 +40,9 @@ img {
 .blur-effect {
   backdrop-filter: blur(3px);
 }
+
+@media (max-width: ((1920px / 16px) * 1rem)) and (orientation: landscape) {
+  html {
+    background: url("./assets/images/1920px-1080px.jpg") center no-repeat;
+  }
+}
