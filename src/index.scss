@@ -7,7 +7,7 @@
 }
 
 html {
-  background: url("./assets/images/1920px-1080px.jpg") center/cover no-repeat;
+  background: url("./assets/images/1920px-1080px.jpg") center/100% 100% no-repeat;
   color: $general-font;
   font-family: 'Cinzel', serif;
 }
@@ -39,22 +39,4 @@ img {
 
 .blur-effect {
   backdrop-filter: blur(3px);
-}
-
-@media (min-width: 3860px) and (min-height: 2160px) {
-  html {
-    background: url("./assets/images/3840px-2160px.jpg") center/cover no-repeat;
-  }
-}
-
-@media (min-width: 2560px) and (min-height: 1440px){
-  html {
-    background: url("./assets/images/2560px-1440px.jpg") center/cover no-repeat;
-  }
-}
-
-@media (max-width: 1920px) and (orientation: landscape) {
-  html {
-    background: url("./assets/images/1920px-1080px.jpg") center no-repeat;
-  }
 }
